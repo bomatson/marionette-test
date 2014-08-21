@@ -1,4 +1,4 @@
-ContactManager.Router = Marionette.AppRouter.extend({
+BorrowerFunnel.Router = Marionette.AppRouter.extend({
   routes: {
     '': 'home'
   },

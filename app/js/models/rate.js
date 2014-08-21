@@ -1,4 +1,4 @@
-ContactManager.Models.Rate = Backbone.Model.extend({
+BorrowerFunnel.Models.Rate = Backbone.Model.extend({
   defaults: {
     rate: null,
     firstName: null,

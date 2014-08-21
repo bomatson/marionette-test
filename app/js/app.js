@@ -1,17 +1,17 @@
-var ContactManager = new Marionette.Application({
+var BorrowerFunnel = new Marionette.Application({
   Models: {},
   Collections: {},
   Views: {}
 });
 
-ContactManager.addRegions({
+BorrowerFunnel.addRegions({
   mainRegion: '.main-container'
 });
 
-ContactManager.addInitializer(function(data) {
-  var router = new ContactManager.Router(),
-      user = new ContactManager.Models.User(),
-      controller = new ContactManager.Controller({
+BorrowerFunnel.addInitializer(function(data) {
+  var router = new BorrowerFunnel.Router(),
+      user = new BorrowerFunnel.Models.User(),
+      controller = new BorrowerFunnel.Controller({
         router: router,
         mainRegion: this.mainRegion,
         user: user
@@ -24,7 +24,7 @@ ContactManager.addInitializer(function(data) {
   });
 });
 
-ContactManager.on('initialize:after', function(options){
+BorrowerFunnel.on('initialize:after', function(options){
   if (Backbone.history){
     Backbone.history.start();
   }

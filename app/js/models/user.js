@@ -1,4 +1,4 @@
-ContactManager.Models.User = Backbone.Model.extend({
+BorrowerFunnel.Models.User = Backbone.Model.extend({
   defaults: {
     loanAmount: null,
     loanPurpose: null,

@@ -1,4 +1,4 @@
-ContactManager.Views.PersonalDetails = Marionette.ItemView.extend({
+BorrowerFunnel.Views.PersonalDetails = Marionette.ItemView.extend({
   template: '#tpl-personal-details',
 
   ui: {
@@ -25,7 +25,7 @@ ContactManager.Views.PersonalDetails = Marionette.ItemView.extend({
     this.model.set(attrs);
     $.post('http://localhost:4567/apply', this.model.attributes)
       .done(function(response) {
-        ContactManager.vent.trigger('rate:submitted', response);
+        BorrowerFunnel.vent.trigger('rate:submitted', response);
       })
   }
 });

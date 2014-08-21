@@ -1,4 +1,4 @@
-ContactManager.Controller = Marionette.Controller.extend({
+BorrowerFunnel.Controller = Marionette.Controller.extend({
   initialize: function(options) {
     this._router = options.router;
     this._mainRegion = options.mainRegion;
@@ -6,8 +6,8 @@ ContactManager.Controller = Marionette.Controller.extend({
   },
 
   showRate: function(response) {
-    var rateView = new ContactManager.Views.Rate({
-      model: new ContactManager.Models.Rate({
+    var rateView = new BorrowerFunnel.Views.Rate({
+      model: new BorrowerFunnel.Models.Rate({
         rate: response.rate,
         firstName: response.first_name,
         lastName: response.last_name,
@@ -19,26 +19,26 @@ ContactManager.Controller = Marionette.Controller.extend({
       })
     });
 
-    ContactManager.mainRegion.show(rateView);
+    BorrowerFunnel.mainRegion.show(rateView);
 
     this._router.navigate('rate');
   },
 
   personalDetails: function() {
-    var personalDetails = new ContactManager.Views.PersonalDetails({
+    var personalDetails = new BorrowerFunnel.Views.PersonalDetails({
       model: this._user
     })
 
-    this.listenTo(ContactManager.vent, 'rate:submitted', function(response) {
+    this.listenTo(BorrowerFunnel.vent, 'rate:submitted', function(response) {
       this.showRate(response);
     });
 
-    ContactManager.mainRegion.show(personalDetails);
+    BorrowerFunnel.mainRegion.show(personalDetails);
     this._router.navigate('users/personal');
   },
 
   newUser: function() {
-    var newUserForm = new ContactManager.Views.UserForm({
+    var newUserForm = new BorrowerFunnel.Views.UserForm({
       model: this._user
     });
 
@@ -46,7 +46,7 @@ ContactManager.Controller = Marionette.Controller.extend({
       this.personalDetails();
     });
 
-    ContactManager.mainRegion.show(newUserForm);
+    BorrowerFunnel.mainRegion.show(newUserForm);
 
     this._router.navigate('users/new');
   }

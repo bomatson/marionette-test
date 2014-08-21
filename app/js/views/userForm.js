@@ -1,4 +1,4 @@
-ContactManager.Views.UserForm = Marionette.ItemView.extend({
+BorrowerFunnel.Views.UserForm = Marionette.ItemView.extend({
   template: '#tpl-new-contact',
 
   ui: {
