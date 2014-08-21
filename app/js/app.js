@@ -9,18 +9,15 @@ ContactManager.addRegions({
 });
 
 ContactManager.addInitializer(function(data) {
-  var contacts = new ContactManager.Collections.Contacts(),
-      router = new ContactManager.Router(),
+  var router = new ContactManager.Router(),
       controller = new ContactManager.Controller({
-        contacts: contacts,
         router: router,
         mainRegion: this.mainRegion
       });
 
   router.processAppRoutes(controller, {
-    'contacts': 'showContacts',
-    'contacts/new': 'newContact',
-    'contacts/edit/:id': 'editContact'
+    'users/new': 'newUser',
+    'rate': 'showRate'
   });
 });
 

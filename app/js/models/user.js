@@ -1,8 +1,7 @@
-ContactManager.Models.Contact = Backbone.Model.extend({
+ContactManager.Models.User = Backbone.Model.extend({
   defaults: {
-    name: null,
-    tel: null,
-    email: null,
-    avatar: null
+    loanAmount: null,
+    loanPurpose: null,
+    creditScore: null
   }
 });

@@ -4,7 +4,7 @@ ContactManager.Router = Marionette.AppRouter.extend({
   },
 
   home: function() {
-    this.navigate('contacts', {
+    this.navigate('users/new', {
       trigger: true,
       replace: true
     });
