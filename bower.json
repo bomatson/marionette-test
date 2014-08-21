@@ -13,5 +13,9 @@
     "underscore": "~1.5.2",
     "marionette": "~1.6.1",
     "Backbone.localStorage": "~1.1.7"
+  },
+  "resolutions": {
+    "backbone": "1.0.0 - 1.1.2",
+    "jquery": ">= 1.9.0"
   }
 }
