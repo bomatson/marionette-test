@@ -1,4 +1,4 @@
-Marionette for Prosper
+Marionette for Borrowers
 ========================
 
     $ bower install
