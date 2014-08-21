@@ -11,19 +11,15 @@ ContactManager.Views.UserForm = Marionette.ItemView.extend({
     'submit .contract-form': 'onFormSubmit'
   },
 
-  serializeData: function() {
-    return _.extend(this.model.toJSON(), {
-      isNew: this.model.isNew()
-    });
-  },
-
   onFormSubmit: function(e) {
     e.preventDefault();
 
-    this.trigger('form:submitted', {
+    var attrs = {
       loanAmount: this.ui.loanAmount.val(),
       loanPurpose: this.ui.loanPurpose.val(),
       creditScore: this.ui.creditScore.val()
-    });
+    }
+    this.model.set(attrs);
+    this.trigger('user:submitted');
   }
 });

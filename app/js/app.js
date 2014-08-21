@@ -10,13 +10,16 @@ ContactManager.addRegions({
 
 ContactManager.addInitializer(function(data) {
   var router = new ContactManager.Router(),
+      user = new ContactManager.Models.User(),
       controller = new ContactManager.Controller({
         router: router,
-        mainRegion: this.mainRegion
+        mainRegion: this.mainRegion,
+        user: user
       });
 
   router.processAppRoutes(controller, {
     'users/new': 'newUser',
+    'users/personal': 'personalDetails',
     'rate': 'showRate'
   });
 });
