@@ -7,4 +7,5 @@ Marionette for Borrowers
     $ ruby marionette-test-server.rb
     $ cd ..
     $ python -m SimpleHTTPServer 8000
-    $ go to http://localhost:8000/index.html
+
+go to http://localhost:8000/index.html
