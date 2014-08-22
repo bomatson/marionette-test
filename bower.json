@@ -1,9 +1,9 @@
 {
-  "name": "backbone-contact-manager",
+  "name": "borrower-funnel",
   "authors": [
-    "Dmytro Yarmak <dmytroyarmak@gmail.com>"
+    "Bobby Matson and Sue Anna Yeh"
   ],
-  "description": "Simple Backbone.js example application",
+  "description": "Simple Marionette example application",
   "license": "MIT",
   "private": true,
   "dependencies": {
