@@ -8,4 +8,4 @@ Marionette for Borrowers
     $ cd ..
     $ python -m SimpleHTTPServer 8000
 
-go to http://localhost:8000/index.html
+go to [http://localhost:8000/index.html](http://localhost:8000/index.html)
